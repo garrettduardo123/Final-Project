@@ -25,6 +25,8 @@ You must inspect your traffic capture to answer the following questions:
 
     - It is classified as a Trojan and is flagged by 49 vendors
 
+ ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/malware.PNG)
+
 ---
 
 ## Vulnerable Windows Machine
@@ -45,6 +47,8 @@ You must inspect your traffic capture to answer the following questions:
 2. What is the username of the Windows user whose computer is infected?
 
     `AS-REQ`
+    
+![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/usernameinfect.PNG)
 
 3. What are the IP addresses used in the actual infection traffic?
 
@@ -84,3 +88,5 @@ You must inspect your traffic capture to answer the following questions:
     `ip.addr == 10.0.0.201 and http.request.uri contains ".torrent"`
 
     `Betty_Boop_Rhythm_on_the_Reservation.avi.torrent`
+    
+ ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/torrent.PNG)
