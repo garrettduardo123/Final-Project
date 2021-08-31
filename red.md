@@ -54,6 +54,7 @@ The following vulnerabilities were identified on each target:
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
   - `flag1.txt`: flag1{b9bbcb33e11b80be759c4e844862482d}
+![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag1.PNG)
     - I found this flag later in the engagement, Once I had access to the system I did some digging around and was able to find it inside of the service.html file
       - I exploited Michael's weak password and used it to gain ssh access to the system
       - Once I had access I ran
