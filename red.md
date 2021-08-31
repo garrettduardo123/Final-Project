@@ -54,28 +54,34 @@ The following vulnerabilities were identified on each target:
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 - Target 1
   - `flag1.txt`: flag1{b9bbcb33e11b80be759c4e844862482d}
-![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag1.PNG)
+  
+	![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag1.PNG)
     - I found this flag later in the engagement, Once I had access to the system I did some digging around and was able to find it inside of the service.html file
       - I exploited Michael's weak password and used it to gain ssh access to the system
       - Once I had access I ran
+      
 	```bash
 	cat /var/www/html/service.html | grep -i flag
 	```
 
   - `flag2.txt`: flag2{fc3fd58dcdad9ab23faca6e9a36e581c}
+
+	![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag2.PNG)
     - Weak Password
       - The User Michael had a weak password with it being Michael and I was able to ssh into the system
       - I then ran `locate flag.txt` to look for flags and found it
 
   - `flag3.txt` : flag3{afc01ab56b50591e7dccf93122770cd2}
+
+	![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag3.PNG)
       - I gained access to the mySQL db inside of the wp-config.php file which contained the login for the root user:
 
-      ```bash
+    ```bash
 	DB_NAME = wordpress
 	DB USER = root
 	DB PASS = R@v3nSecurity
-      ```
-      - Once logged into the DB I looked at all the tables that were inside the DB and ran:
+    ```
+   - Once logged into the DB I looked at all the tables that were inside the DB and ran:
 
        ```bash
        USE wordpress;
@@ -84,13 +90,15 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
        ```
        
        
-      - This then gave me two hashes for the passwords of users Steven and Michael
+   - This then gave me two hashes for the passwords of users Steven and Michael
       
     ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/hashes.PNG))
 
       - I found this flag inside of the mySQL database under the wp_posts
 
   - `flag4.txt` : flag4{715dea6c055b9fe3337544932f2941ce}
+
+	![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag4.PNG)
       - Once I got access to Steven's account via the mySQL DB weak hashes I looked for sudo privilege's and found that I had access to use Python
       - Once I figured out that Stevens allowed to use Python I looked online for possible ways to escalate privilege's using Python and found a good resource
 
