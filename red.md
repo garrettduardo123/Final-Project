@@ -14,12 +14,16 @@ Nmap scan results for each machine reveal the below services and OS details:
       $ nmap 192.168.1.0/24
   ```
 ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/Capture.PNG)
+
 This scan identifies the services below as potential points of entry:
 - Target 1
   - List of Several IP's that are online and each IP has several ports that   are left open.
   - Several have Port 22 (SSH), 80 (HTTP), 111 (RPCBIND), 445 (MICRO-DS).
   - These are all possible vulnerabilities that need to be monitored/hardened because attackers can use these ports that are open to find a possible entry to the system.
   - I checked to see what the HTTP servers had on them and found a Raven Security Page that had tons of information that allowed me to learn more about the system and found that it is a wordpress site, which is known for weak security and has several holes for attackers.
+  - I then ran a more intensive scan to look for OS details and to be a little more aggressive and found:
+
+![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/Capture1.PNG)
 
 The following vulnerabilities were identified on each target:
 - Target 1
