@@ -49,6 +49,9 @@ The following vulnerabilities were identified on each target:
   
   - This gave me some substantial information and found 2 users that were on the system:
 
+
+  ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/users.PNG)
+
 	`Steven & Michael`
 
   - This scan and enumeration technique gave me more than I needed to continue with the further attacks
