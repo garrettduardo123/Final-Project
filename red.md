@@ -13,7 +13,7 @@ Nmap scan results for each machine reveal the below services and OS details:
   ```bash
       $ nmap 192.168.1.0/24
   ```
-
+![alt text](resources/capture.png)
 This scan identifies the services below as potential points of entry:
 - Target 1
   - List of Several IP's that are online and each IP has several ports that   are left open.
