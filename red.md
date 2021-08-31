@@ -102,7 +102,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       
     ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/hashes.PNG))
 
-      - I found this flag inside of the mySQL database under the wp_posts
+     - I found this flag inside of the mySQL database under the wp_posts
 
   - `flag4.txt` : flag4{715dea6c055b9fe3337544932f2941ce}
 
