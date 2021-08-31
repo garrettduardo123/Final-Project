@@ -32,11 +32,16 @@ The following vulnerabilities were identified on each target:
   ```bash
     $ python3 dirsearch.py -u 192.168.1.110
   ```
+  
+  ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/dirsearch.PNG)
+  
   - This didn't lead to anything substantial so I then ran a WPScan knowing its a WordPress site to find vulnerabilities and possible users:
 
   ```bash
   $ wpscan --url 192.168.1.110/wordpress --enumerate u
   ```
+   ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/wpscan.PNG)
+  
   - This gave me some substantial information and found 2 users that were on the system:
 
 	`Steven & Michael`
@@ -75,8 +80,11 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
        SHOW TABLES;
        SELECT * FROM wp_users
        ```
+       
+       
       - This then gave me two hashes for the passwords of users Steven and Michael
-    ![](images/hashes.PNG)
+      
+    ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/hashes.PNG))
 
       - I found this flag inside of the mySQL database under the wp_posts
 
