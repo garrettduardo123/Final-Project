@@ -21,7 +21,12 @@ This scan identifies the services below as potential points of entry:
   - Several have Port 22 (SSH), 80 (HTTP), 111 (RPCBIND), 445 (MICRO-DS).
   - These are all possible vulnerabilities that need to be monitored/hardened because attackers can use these ports that are open to find a possible entry to the system.
   - I checked to see what the HTTP servers had on them and found a Raven Security Page that had tons of information that allowed me to learn more about the system and found that it is a wordpress site, which is known for weak security and has several holes for attackers.
-  - I then ran a more intensive scan to look for OS details and to be a little more aggressive and found:
+  - I then ran a more intensive scan to look for OS details and to be a little more aggressive and found using:
+
+
+   ```bash
+      $ nmap -A 192.168.1.110
+   ```
 
 ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/Capture1.PNG)
 
