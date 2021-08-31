@@ -77,6 +77,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - Once logged into the DB I looked at all the tables that were inside the DB and ran:
 
        ```bash
+       USE wordpress;
        SHOW TABLES;
        SELECT * FROM wp_users
        ```
