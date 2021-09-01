@@ -21,7 +21,7 @@ This scan identifies the services below as potential points of entry:
   - Several have Port 22 (SSH), 80 (HTTP), 111 (RPCBIND), 445 (MICRO-DS).
   - These are all possible vulnerabilities that need to be monitored/hardened because attackers can use these ports that are open to find a possible entry to the system.
   - I checked to see what the HTTP servers had on them and found a Raven Security Page that had tons of information that allowed me to learn more about the system and found that it is a wordpress site, which is known for weak security and has several holes for attackers.
-  - I then ran a more intensive scan to look for OS details and to be a little more aggressive and found using:
+  - I then ran a more intensive scan to look for OS information and versions of each of the services that were available:
 
 
    ```bash
@@ -32,6 +32,8 @@ This scan identifies the services below as potential points of entry:
 
 The following vulnerabilities were identified on each target:
 - Target 1
+
+
   - Once I found out that there was a site I ran a common directory search using a python script called dirsearch
 
   ```bash
@@ -40,7 +42,7 @@ The following vulnerabilities were identified on each target:
   
   ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/dirsearch.PNG)
   
-  - This didn't lead to anything substantial so I then ran a WPScan knowing its a WordPress site to find vulnerabilities and possible users:
+  - This didn't lead to anything substantial so I then ran a WPScan knowing its a WordPress site to find known vulnerabilities and possible users:
 
   ```bash
   $ wpscan --url 192.168.1.110/wordpress --enumerate u
@@ -54,7 +56,7 @@ The following vulnerabilities were identified on each target:
 
 	`Steven & Michael`
 
-  - This scan and enumeration technique gave me more than I needed to continue with the further attacks
+  - This scan and enumeration technique gave me more than I needed to continue
 
 
 ### Exploitation
@@ -64,7 +66,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   - `flag1.txt`: flag1{b9bbcb33e11b80be759c4e844862482d}
   
 	![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/flag1.PNG)
-    - I found this flag later in the engagement, Once I had access to the system I did some digging around and was able to find it inside of the service.html file
+	
+      - I found this flag later in the engagement, but once I had access to the system I did some digging around and was able to find it inside of the service.html file
       - I exploited Michael's weak password and used it to gain ssh access to the system
       - Once I had access I ran
       
@@ -89,14 +92,13 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 	DB USER = root
 	DB PASS = R@v3nSecurity
     ```
-   - Once logged into the DB I looked at all the tables that were inside the DB and ran:
+   - Once logged into the DB I looked at the tables that were inside the DB and ran:
 
        ```bash
        USE wordpress;
        SHOW TABLES;
        SELECT * FROM wp_users
        ```
-       
        
    - This then gave me two hashes for the passwords of users Steven and Michael
       
