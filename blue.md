@@ -63,11 +63,11 @@ HTTP Request Size Monitor is implemented as follows:
   - **Metric**: WHEN sum() of http.request.bytes OVER all documents
   - **Threshold**:  IS ABOVE 3500 FOR THE LAST 1 minute
   - **Vulnerability Mitigated**: Possible HTTP request smuggling attacks,possible     		attempts at enumeration
-  - **Reliability**: This alert has its positives but it seems to producing a ton of 		false positives and creating a lot of triggers compared to the CPU Usage 		alert. May have to edit the threshold to make it a little more strict.
+  - **Reliability**: This alert has its positives but it seems to producing a ton of 		false positives and creating a lot of triggers compared to the CPU Usage 		alert. May have     to edit the threshold to make it a little more strict.
 
 #### CPU Usage Monitor
 CPU Usage Monitor is implemented as follows:
   - **Metric**: WHEN max() OF system.process.cpu.total.pct OVER all documents
   - **Threshold**: IS ABOVE 0.5 FOR THE LAST 5 minutes
   - **Vulnerability Mitigated**: Possible Denial of Serivce attack to the webserver
-  - **Reliability**:  This alert it very good, only triggered two alerts and seems 		reliable and not triggered too many false positives. In my opinion it has a 		high reliability for future use.
+  - **Reliability**:  This alert is very good, only triggered two alerts and seems reliable and not triggered too many false positives. In my opinion it has a high reliability for     future use.
