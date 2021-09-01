@@ -6,15 +6,15 @@ You must inspect your traffic capture to answer the following questions:
 
 1. What is the domain name of the users' custom site?
 
-      `wpad.frank-n-ted.com`
+      wpad.frank-n-ted.com
 
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
-    `10.6.12.12`
+    10.6.12.12
 
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
 
-    `ip.addr == 10.6.12.203`
+    `filter = ip.addr == 10.6.12.203`
 
 
 4. What kind of malware is this classified as?
@@ -34,32 +34,27 @@ You must inspect your traffic capture to answer the following questions:
 1. Find the following information about the infected Windows machine:
     - Host name:
 
-    `mind-hammer, LenevoEM_b0:63:a4`
+    mind-hammer, LenevoEM_b0:63:a4
 
     - IP address:
 
-     `172.16.4.205`
+     172.16.4.205
 
     - MAC address:
 
-    `00:59:07:b0:63:a4`
+    00:59:07:b0:63:a4
 
 2. What is the username of the Windows user whose computer is infected?
 
-    `AS-REQ`
+    AS-REQ
     
 ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/usernameinfect.PNG)
 
 3. What are the IP addresses used in the actual infection traffic?
 
-    `172.16.4.205`
+    172.16.4.205
 
-    `172.16.4.4`
-
-
-4. As a bonus, retrieve the desktop background of the Windows host.
-
-
+    172.16.4.4
 
 ---
 
@@ -67,26 +62,26 @@ You must inspect your traffic capture to answer the following questions:
 
 1. Find the following information about the machine with IP address `10.0.0.201`:
 
-    `ip.addr == 10.0.0.201`
+    `filter = ip.addr == 10.0.0.201`
 
     - MAC address
 
-        `00:16:17:18:66:c8`
+        00:16:17:18:66:c8
 
     - Windows username
 
-    `Blanco-Desktop`
+    Blanco-Desktop
 
     - OS version
 
-    `ip.addr == 10.0.0.201 and http`
+    `filter = ip.addr == 10.0.0.201 and http`
 
-    `Windows NT 10.0`
+    Windows NT 10.0
 
 2. Which torrent file did the user download?
 
-    `ip.addr == 10.0.0.201 and http.request.uri contains ".torrent"`
+    `filter = ip.addr == 10.0.0.201 and http.request.uri contains ".torrent"`
 
-    `Betty_Boop_Rhythm_on_the_Reservation.avi.torrent`
+    Betty_Boop_Rhythm_on_the_Reservation.avi.torrent
     
  ![](https://github.com/garrettduardo123/Final-Project/blob/main/Resources/torrent.PNG)
